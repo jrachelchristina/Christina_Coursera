@@ -9,32 +9,89 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.h
+ * @brief Function declarations for statistical analysis.
  *
- * <Add Extended Description Here>
+ * This file declares functions to calculate statistics and sort an array.
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Rachel Christina
+ * @date 10/11/2026
  *
  */
 #ifndef __STATS_H__
 #define __STATS_H__
 
-/* Add Your Declarations and Function Comments here */ 
+/**
+ * @brief Prints the statistics of an array.
+ *
+ * Displays the minimum, maximum, mean, and median values.
+ *
+ * @param array Pointer to the data array.
+ * @param length Number of elements in the array.
+ */
+void print_statistics(unsigned char *array, unsigned int length);
+
 
 /**
- * @brief <Add Brief Description of Function Here>
+ * @brief Prints the elements of an array.
  *
- * <Add Extended Description Here>
+ * Displays all elements of the given data array.
  *
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- * @param <Add InputName> <add description here>
- *
- * @return <Add Return Informaiton here>
+ * @param array Pointer to the data array.
+ * @param length Number of elements in the array.
  */
+void print_array(unsigned char *array, unsigned int length);
+/**
+ * @brief Finds the median value of an array.
+ *
+ * Returns the median value after sorting the data.
+ *
+ * @param array Pointer to the data array.
+ * @param length Number of elements in the array.
+ * @return Median value of the array.
+ */
+unsigned char find_median(unsigned char *array, unsigned int length);
 
+/**
+ * @brief Calculates the mean of an array.
+ *
+ * Calculates the average value of all elements.
+ *
+ * @param array Pointer to the data array.
+ * @param length Number of elements in the array.
+ * @return Mean value rounded down to the nearest integer.
+ */
+unsigned char find_mean(unsigned char *array, unsigned int length);
 
+/**
+ * @brief Finds the maximum value in an array.
+ *
+ * Searches for the largest element in the data array.
+ *
+ * @param array Pointer to the data array.
+ * @param length Number of elements in the array.
+ * @return Maximum value in the array.
+ */
+unsigned char find_maximum(unsigned char *array, unsigned int length);
+
+/**
+ * @brief Finds the minimum value in an array.
+ *
+ * Searches for the smallest element in the data array.
+ *
+ * @param array Pointer to the data array.
+ * @param length Number of elements in the array.
+ * @return Minimum value in the array.
+ */
+unsigned char find_minimum(unsigned char *array, unsigned int length);
+
+/**
+ * @brief Sorts an array in descending order.
+ *
+ * Arranges the elements from largest to smallest.
+ *
+ * @param array Pointer to the data array.
+ * @param length Number of elements in the array.
+ */
+void sort_array(unsigned char *array, unsigned int length);
 #endif /* __STATS_H__ */
